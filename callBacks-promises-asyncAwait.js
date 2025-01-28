@@ -212,21 +212,21 @@ Promise.any([interval(), subscribe("sunny"), likeTheVideo()])
 function interval(){
     return promise = new Promise((resolve)=>{
         setTimeout(()=>{
-            resolve ("ye to print ho gya!!");
+            resolve("ye to print ho gya!!");
         },3000)
     })
 }
 function subscribe(newMember){
     return promise = new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            reject (newMember+" subscribed my channel!!");
+            resolve(newMember+" subscribed my channel!!");
         },100)
     })
 }
 function likeTheVideo(){
     return promise = new Promise((resolve)=>{
         setTimeout(()=>{
-            resolve ("Like the video");
+            resolve("Like the video");
         },1000)
     })
 }
@@ -234,11 +234,15 @@ function likeTheVideo(){
 
 const result = async ()=>{
     try{
-        const m1 = await interval()
-        console.log(m1)
+        const m1 = await interval();
+        console.log(m1);
+        const m2 = await subscribe("Adigotech");
+        console.log(m2);
+        const m3 = await likeTheVideo();
+        console.log(m3);
     }catch(error){
-        console.log(error)
+        console.log(error);
     }
 }
-
+result();
 
