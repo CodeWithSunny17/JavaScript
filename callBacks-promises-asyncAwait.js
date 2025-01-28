@@ -1,4 +1,12 @@
-
+//callback example
+function interval(callBackf){
+    setTimeout(()=>{
+        callBackf("ye to print ho gya!!");
+    },1000)
+}
+interval(function callBackf(pass){
+    console.log(pass);
+})
 
 
 
