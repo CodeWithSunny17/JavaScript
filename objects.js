@@ -109,6 +109,6 @@ console.log(d)  //OP: "sunny"
 //both will give false because both element in each comparison has difference reference
 console.log([1] === [1])     //false
 console.log([1] == [1])      //false
-
+//Explanation: In JavaScript, arrays are reference types, meaning that when you create an array, JavaScript stores it in memory and assigns a reference (or address) to it.
 
 
