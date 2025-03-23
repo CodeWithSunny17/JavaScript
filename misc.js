@@ -9,3 +9,29 @@ for(let i=0; i<4 ;i++){
 
 console.log(obj)
 
+
+//occurance question
+const sample = [1,1,1,2,2,3,4,4,5,5,5,5,5,5,7,7,6,6,6,6,6,6]
+
+var obj = {}
+
+for(let i=0; i<sample.length; i++){
+
+    //brute force method
+    // let count=0
+    // for(let j=0; j<sample.length; j++){
+        
+    //     if(sample[i]==sample[j]){
+    //         count++;
+    //     }
+    // }
+    // obj[sample[i]]=count;
+    // // console.log(count)
+    // count=0;
+
+
+    //optimized method
+    obj[sample[i]]? obj[sample[i]]+=1: obj[sample[i]]=1
+}
+
+console.log(obj)
