@@ -35,3 +35,43 @@ for(let i=0; i<sample.length; i++){
 }
 
 console.log(obj)
+
+
+
+//write a function that takes an array of functions and excute it one by one\
+
+let arrFun =[
+        function add(a,b) {
+            return a+b
+        },  
+        function subtract(a,b) {
+            return a-b
+        }, 
+        function multiply(a,b) {
+            return a*b
+        }
+    ]
+    
+    
+    let arrFun1 =[
+        {
+            fun: function add(a,b) {
+                return a+b
+            }
+        },  
+        {
+            fun: function subtract(a,b) {
+            return a-b
+            }
+        }, 
+        {
+            fun: function multiply(a,b) {
+            return a*b
+            }
+        }
+    ]
+    
+    const main=()=>{
+        return arrFun.map((fun)=> fun.fun(6,4))
+    }
+    console.log(main())
