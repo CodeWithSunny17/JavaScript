@@ -75,3 +75,33 @@ let arrFun =[
         return arrFun.map((fun)=> fun.fun(6,4))
     }
     console.log(main())
+
+
+
+//return "this is my name" in reverse order i.e "name my is this"
+ const value="this is my name";
+ 
+  let word = "";
+  let outputWords = [];
+  let final=""
+
+  for (let i = 0; i < value.length; i++) {
+    let char = value[i];
+    if ((value[i] === " ")) {
+      outputWords.push(word);
+      word = "";
+    } else {
+      word += char;
+      char="";
+    }
+    if(i===value.length-1){
+        outputWords.push(word);
+    }
+  }
+  
+  
+  for(let i=outputWords.length-1;i>=0;i--){
+      final=final+" "+outputWords[i];
+  }
+  
+console.log(final);
