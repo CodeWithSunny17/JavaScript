@@ -11,30 +11,16 @@ console.log(obj)
 
 
 //occurance question
-const sample = [1,1,1,2,2,3,4,4,5,5,5,5,5,5,7,7,6,6,6,6,6,6]
+const arr =[1,2,1,4,2,3,1,4,0];
+let obj ={};
 
-var obj = {}
-
-for(let i=0; i<sample.length; i++){
-
-    //brute force method
-    // let count=0
-    // for(let j=0; j<sample.length; j++){
-        
-    //     if(sample[i]==sample[j]){
-    //         count++;
-    //     }
-    // }
-    // obj[sample[i]]=count;
-    // // console.log(count)
-    // count=0;
-
-
-    //optimized method
-    obj[sample[i]]? obj[sample[i]]+=1: obj[sample[i]]=1
+for(let i=0;i<arr.length;i++){
+    const o = {[arr[i]] : arr[i] in obj? obj[arr[i]]+1 :1}        //we are checking if the key arr[i] is present in the arr
+    // const o = {[arr[i]] : obj[arr[i]]? obj[arr[i]]+1 :1}       //we are checking if the value is present in the arr, this can also be done
+    obj = {...obj, ...o}
 }
 
-console.log(obj)
+console.log(obj);
 
 
 
